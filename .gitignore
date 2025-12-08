@@ -1,0 +1,48 @@
+﻿## .NET Core
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Bb]uild/
+bld/
+[Oo]bj/
+[Ll]og/
+
+## Visual Studio
+.vs/
+.vscode/
+*.csproj.user
+*.vbproj.user
+
+## Rider
+.idea/
+*.sln.iml
+
+## OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+## Project files (logs, si no son necesarias)
+logs/
+*.log
+*.bak
+*.tmp
+
+## Archivos de datos CSV (si son grandes, considera excluirlos)
+# *.csv
