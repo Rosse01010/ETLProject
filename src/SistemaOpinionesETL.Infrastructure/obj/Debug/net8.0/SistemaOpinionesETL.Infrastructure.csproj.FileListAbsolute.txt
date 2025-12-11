@@ -1,0 +1,15 @@
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\bin\Debug\net8.0\SistemaOpinionesETL.Infrastructure.deps.json
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\bin\Debug\net8.0\SistemaOpinionesETL.Infrastructure.dll
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\bin\Debug\net8.0\SistemaOpinionesETL.Infrastructure.pdb
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\bin\Debug\net8.0\SistemaOpinionesETL.Core.dll
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\bin\Debug\net8.0\SistemaOpinionesETL.Core.pdb
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\obj\Debug\net8.0\SistemaOpinionesETL.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\obj\Debug\net8.0\SistemaOpinionesETL.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\obj\Debug\net8.0\SistemaOpinionesETL.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\obj\Debug\net8.0\SistemaOpinionesETL.Infrastructure.AssemblyInfo.cs
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\obj\Debug\net8.0\SistemaOpinionesETL.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\obj\Debug\net8.0\SistemaO.CA237719.Up2Date
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\obj\Debug\net8.0\SistemaOpinionesETL.Infrastructure.dll
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\obj\Debug\net8.0\refint\SistemaOpinionesETL.Infrastructure.dll
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\obj\Debug\net8.0\SistemaOpinionesETL.Infrastructure.pdb
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\obj\Debug\net8.0\ref\SistemaOpinionesETL.Infrastructure.dll

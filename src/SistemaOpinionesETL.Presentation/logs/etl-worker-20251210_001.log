@@ -1,0 +1,555 @@
+2025-12-10 15:32:05.815 -04:00 [INF] 🚀 Iniciando aplicación Worker ETL
+2025-12-10 15:32:06.012 -04:00 [INF] ✅ Aplicación configurada correctamente
+2025-12-10 15:32:06.040 -04:00 [INF] ▶️  Iniciando Worker Service ETL...
+2025-12-10 15:32:06.049 -04:00 [INF] 🚀 Worker Service ETL iniciado en: "2025-12-10T15:32:06.0427923-04:00"
+2025-12-10 15:32:06.053 -04:00 [INF] 📊 Configuración: Directorio staging = ../../../staging
+2025-12-10 15:32:06.057 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-10 15:32:06.059 -04:00 [INF] Hosting environment: Development
+2025-12-10 15:32:06.060 -04:00 [INF] Content root path: C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Presentation
+2025-12-10 15:32:11.083 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 15:32:11
+2025-12-10 15:32:11.183 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 15:32:11.186 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 15:32:11.306 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 15:32:11.339 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 15:32:11.349 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 15:32:11.359 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 15:32:11.368 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 15:32:11.370 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 184ms
+2025-12-10 15:32:11.454 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:32:11.475 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:32:11.486 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:32:11.586 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.)
+ ---> System.ComponentModel.Win32Exception (233): No process is on the other end of the pipe.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:e91be2f5-be44-4b63-8024-19b507108cc4
+Error Number:233,State:0,Class:20
+2025-12-10 15:32:11.591 -04:00 [INF] Received HTTP response headers after 99.1097ms - 404
+2025-12-10 15:32:11.631 -04:00 [INF] End processing HTTP request after 166.7305ms - 404
+2025-12-10 15:32:11.636 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 15:32:11.718 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_153211.json
+2025-12-10 15:32:11.721 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.)
+2025-12-10 15:32:11.726 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 15:32:11.727 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 543ms
+2025-12-10 15:32:11.731 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.5439839"
+2025-12-10 15:32:11.743 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 15:37:11.080 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 15:37:11
+2025-12-10 15:37:11.092 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 15:37:11.094 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 15:37:11.111 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 15:37:11.115 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:37:11.116 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 15:37:11.117 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:37:11.125 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'etl_reader'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:97ca7324-e09e-4d1a-895b-91497d7c44e2
+Error Number:18456,State:1,Class:14
+2025-12-10 15:37:11.126 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:37:11.126 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 15:37:11.148 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 15:37:11.168 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 15:37:11.176 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 81ms
+2025-12-10 15:37:11.183 -04:00 [INF] Received HTTP response headers after 45.1416ms - 404
+2025-12-10 15:37:11.190 -04:00 [INF] End processing HTTP request after 72.861ms - 404
+2025-12-10 15:37:11.192 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 15:37:11.227 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_153711.json
+2025-12-10 15:37:11.234 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Login failed for user 'etl_reader'.
+2025-12-10 15:37:11.241 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 15:37:11.251 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 158ms
+2025-12-10 15:37:11.253 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.1588225"
+2025-12-10 15:37:11.254 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 15:42:11.081 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 15:42:11
+2025-12-10 15:42:11.092 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 15:42:11.093 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 15:42:11.097 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 15:42:11.102 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:42:11.107 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 15:42:11.116 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:42:11.124 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 15:42:11.126 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:42:11.127 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'etl_reader'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:3bbff24b-d4d5-4a36-9904-fbf1fb48e2be
+Error Number:18456,State:1,Class:14
+2025-12-10 15:42:11.130 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 15:42:11.145 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 15:42:11.163 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 69ms
+2025-12-10 15:42:11.185 -04:00 [INF] Received HTTP response headers after 56.5667ms - 404
+2025-12-10 15:42:11.198 -04:00 [INF] End processing HTTP request after 82.2645ms - 404
+2025-12-10 15:42:11.215 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 15:42:11.235 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_154211.json
+2025-12-10 15:42:11.244 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Login failed for user 'etl_reader'.
+2025-12-10 15:42:11.245 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 15:42:11.316 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 224ms
+2025-12-10 15:42:11.324 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.2240987"
+2025-12-10 15:42:11.327 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 15:47:11.089 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 15:47:11
+2025-12-10 15:47:11.102 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 15:47:11.103 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 15:47:11.107 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 15:47:11.126 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 15:47:11.130 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:47:11.141 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:47:11.147 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:47:11.141 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 15:47:11.163 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 15:47:11.179 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 15:47:11.187 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 84ms
+2025-12-10 15:47:11.189 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'etl_reader'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:e45c808e-bd07-4b78-8c38-02aa8d9b1c3a
+Error Number:18456,State:1,Class:14
+2025-12-10 15:47:11.224 -04:00 [INF] Received HTTP response headers after 70.773ms - 404
+2025-12-10 15:47:11.228 -04:00 [INF] End processing HTTP request after 86.9395ms - 404
+2025-12-10 15:47:11.231 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 15:47:11.245 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_154711.json
+2025-12-10 15:47:11.248 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Login failed for user 'etl_reader'.
+2025-12-10 15:47:11.250 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 15:47:11.251 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 149ms
+2025-12-10 15:47:11.253 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.1495248"
+2025-12-10 15:47:11.255 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 15:52:11.138 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 15:52:11
+2025-12-10 15:52:11.156 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 15:52:11.160 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 15:52:11.188 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 15:52:11.195 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:52:11.204 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:52:11.206 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 15:52:11.206 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:52:11.211 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 15:52:11.217 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 15:52:11.225 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 15:52:11.227 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 67ms
+2025-12-10 15:52:11.227 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'etl_reader'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:c3b5cc4f-c6b6-4c4e-a9b6-0d032e1f7f8c
+Error Number:18456,State:1,Class:14
+2025-12-10 15:52:11.277 -04:00 [INF] Received HTTP response headers after 68.5481ms - 404
+2025-12-10 15:52:11.280 -04:00 [INF] End processing HTTP request after 79.072ms - 404
+2025-12-10 15:52:11.291 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 15:52:11.312 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_155211.json
+2025-12-10 15:52:11.314 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Login failed for user 'etl_reader'.
+2025-12-10 15:52:11.321 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 15:52:11.322 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 165ms
+2025-12-10 15:52:11.324 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.1657646"
+2025-12-10 15:52:11.327 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 15:57:11.117 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 15:57:11
+2025-12-10 15:57:11.126 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 15:57:11.129 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 15:57:11.135 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 15:57:11.141 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:57:11.146 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 15:57:11.149 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:57:11.151 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'etl_reader'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:762cdb9a-78af-4dbf-9ac0-8e45aa2a5b9a
+Error Number:18456,State:1,Class:14
+2025-12-10 15:57:11.156 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 15:57:11.161 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 15:57:11.186 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 15:57:11.219 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 15:57:11.224 -04:00 [INF] Received HTTP response headers after 47.4748ms - 404
+2025-12-10 15:57:11.227 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 98ms
+2025-12-10 15:57:11.230 -04:00 [INF] End processing HTTP request after 81.6675ms - 404
+2025-12-10 15:57:11.235 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 15:57:11.243 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_155711.json
+2025-12-10 15:57:11.246 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Login failed for user 'etl_reader'.
+2025-12-10 15:57:11.247 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 15:57:11.250 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 124ms
+2025-12-10 15:57:11.257 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.1245231"
+2025-12-10 15:57:11.258 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 16:02:11.152 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 16:02:11
+2025-12-10 16:02:11.203 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 16:02:11.207 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 16:02:11.281 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 16:02:11.292 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:02:11.299 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:02:11.303 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:02:11.311 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 16:02:11.322 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 16:02:11.331 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 16:02:11.345 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 16:02:11.355 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 147ms
+2025-12-10 16:02:11.360 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'etl_reader'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:dfd801ac-0eeb-406c-97b1-fc79bfe8633f
+Error Number:18456,State:1,Class:14
+2025-12-10 16:02:11.426 -04:00 [INF] Received HTTP response headers after 121.7267ms - 404
+2025-12-10 16:02:11.430 -04:00 [INF] End processing HTTP request after 131.9498ms - 404
+2025-12-10 16:02:11.438 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 16:02:11.471 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_160211.json
+2025-12-10 16:02:11.473 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Login failed for user 'etl_reader'.
+2025-12-10 16:02:11.475 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 16:02:11.477 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 274ms
+2025-12-10 16:02:11.481 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.2744248"
+2025-12-10 16:02:11.485 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 16:07:11.155 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 16:07:11
+2025-12-10 16:07:11.176 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 16:07:11.179 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 16:07:11.199 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 16:07:11.282 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:07:11.296 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 16:07:11.332 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:07:11.349 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:07:11.346 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 16:07:11.409 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 16:07:11.421 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'etl_reader'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:669ef2e3-6408-4d71-80f9-bef82e1a89f8
+Error Number:18456,State:1,Class:14
+2025-12-10 16:07:11.423 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 16:07:11.434 -04:00 [INF] Received HTTP response headers after 39.8437ms - 404
+2025-12-10 16:07:11.458 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 278ms
+2025-12-10 16:07:11.463 -04:00 [INF] End processing HTTP request after 131.3947ms - 404
+2025-12-10 16:07:11.476 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 16:07:11.499 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_160711.json
+2025-12-10 16:07:11.500 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Login failed for user 'etl_reader'.
+2025-12-10 16:07:11.533 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 16:07:11.594 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 418ms
+2025-12-10 16:07:11.666 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.4181316"
+2025-12-10 16:07:11.673 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 16:12:11.163 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 16:12:11
+2025-12-10 16:12:11.180 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 16:12:11.186 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 16:12:11.205 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 16:12:11.213 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:12:11.217 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 16:12:11.219 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:12:11.222 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:12:11.224 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 16:12:11.236 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 16:12:11.246 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 16:12:11.250 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 63ms
+2025-12-10 16:12:11.253 -04:00 [INF] Received HTTP response headers after 30.2345ms - 404
+2025-12-10 16:12:11.259 -04:00 [INF] End processing HTTP request after 38.3683ms - 404
+2025-12-10 16:12:11.264 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 16:12:11.281 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'etl_reader'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:8f6a697a-0331-4ac0-9051-65e39928f725
+Error Number:18456,State:1,Class:14
+2025-12-10 16:12:11.303 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_161211.json
+2025-12-10 16:12:11.304 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Login failed for user 'etl_reader'.
+2025-12-10 16:12:11.306 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 16:12:11.307 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 126ms
+2025-12-10 16:12:11.316 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.1267991"
+2025-12-10 16:12:11.323 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 16:17:11.167 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 16:17:11
+2025-12-10 16:17:11.171 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 16:17:11.173 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 16:17:11.176 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 16:17:11.195 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 16:17:11.196 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:17:11.207 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:17:11.209 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 16:17:11.209 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:17:11.210 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'etl_reader'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:eff25795-39d6-45a6-84f7-6cd511dfc608
+Error Number:18456,State:1,Class:14
+2025-12-10 16:17:11.212 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 16:17:11.237 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 16:17:11.242 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 68ms
+2025-12-10 16:17:11.243 -04:00 [INF] Received HTTP response headers after 31.8205ms - 404
+2025-12-10 16:17:11.255 -04:00 [INF] End processing HTTP request after 47.9206ms - 404
+2025-12-10 16:17:11.257 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 16:17:11.271 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_161711.json
+2025-12-10 16:17:11.275 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Login failed for user 'etl_reader'.
+2025-12-10 16:17:11.277 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 16:17:11.278 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 106ms
+2025-12-10 16:17:11.280 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.1066243"
+2025-12-10 16:17:11.290 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 16:22:11.177 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 16:22:11
+2025-12-10 16:22:11.234 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 16:22:11.252 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 16:22:11.261 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 16:22:11.264 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 16:22:11.268 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:22:11.316 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:22:11.302 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'etl_reader'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:9579a0f7-28d3-4420-92de-09fcaef43735
+Error Number:18456,State:1,Class:14
+2025-12-10 16:22:11.318 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 16:22:11.320 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:22:11.333 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 16:22:11.366 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 16:22:11.499 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 246ms
+2025-12-10 16:22:11.530 -04:00 [INF] Received HTTP response headers after 196.7498ms - 404
+2025-12-10 16:22:11.536 -04:00 [INF] End processing HTTP request after 220.0089ms - 404
+2025-12-10 16:22:11.543 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 16:22:11.558 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_162211.json
+2025-12-10 16:22:11.570 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Login failed for user 'etl_reader'.
+2025-12-10 16:22:11.581 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 16:22:11.585 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 351ms
+2025-12-10 16:22:11.589 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.3513253"
+2025-12-10 16:22:11.591 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 16:27:11.192 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 16:27:11
+2025-12-10 16:27:11.201 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 16:27:11.204 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 16:27:11.215 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 16:27:11.225 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 16:27:11.239 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:27:11.241 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:27:11.244 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/ComentariosRedesSociales/redes-sociales
+2025-12-10 16:27:11.246 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 16:27:11.253 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 16:27:11.255 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'etl_reader'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:f43f0273-8b18-49a4-a899-e3cf49dd6f9d
+Error Number:18456,State:1,Class:14
+2025-12-10 16:27:11.260 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 16:27:11.266 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 62ms
+2025-12-10 16:27:11.381 -04:00 [INF] Received HTTP response headers after 133.1323ms - 404
+2025-12-10 16:27:11.397 -04:00 [INF] End processing HTTP request after 156.3327ms - 404
+2025-12-10 16:27:11.405 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 68
+2025-12-10 16:27:11.415 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_162711.json
+2025-12-10 16:27:11.417 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Login failed for user 'etl_reader'.
+2025-12-10 16:27:11.420 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: Response status code does not indicate success: 404 (Not Found).
+2025-12-10 16:27:11.421 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 219ms
+2025-12-10 16:27:11.422 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:00.2198270"
+2025-12-10 16:27:11.424 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59

@@ -1,0 +1,144 @@
+2025-12-10 16:22:12.307 -04:00 [INF] 🚀 Iniciando aplicación Worker ETL
+2025-12-10 16:22:12.515 -04:00 [INF] ✅ Aplicación configurada correctamente
+2025-12-10 16:22:12.530 -04:00 [INF] ▶️  Iniciando Worker Service ETL...
+2025-12-10 16:22:12.540 -04:00 [INF] 🚀 Worker Service ETL iniciado en: "2025-12-10T16:22:12.5338515-04:00"
+2025-12-10 16:22:12.546 -04:00 [INF] 📊 Configuración: Directorio staging = ../../../staging
+2025-12-10 16:22:12.556 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-10 16:22:12.559 -04:00 [INF] Hosting environment: Development
+2025-12-10 16:22:12.565 -04:00 [INF] Content root path: C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Presentation
+2025-12-10 16:22:17.570 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 16:22:17
+2025-12-10 16:22:17.627 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 16:22:17.639 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 16:22:17.876 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 16:22:17.909 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 16:22:18.005 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 16:22:18.059 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/Comentarios/redes-sociales
+2025-12-10 16:22:18.093 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 16:22:18.101 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/Comentarios/redes-sociales
+2025-12-10 16:22:18.107 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/Comentarios/redes-sociales
+2025-12-10 16:22:18.111 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 16:22:18.119 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 480ms
+2025-12-10 16:22:18.260 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Reviews'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 72
+ClientConnectionId:baa6f05a-54bd-4243-88da-e6629a0e9f61
+Error Number:208,State:1,Class:16
+2025-12-10 16:22:18.349 -04:00 [INF] Received HTTP response headers after 234.8482ms - 200
+2025-12-10 16:22:18.362 -04:00 [INF] End processing HTTP request after 269.9425ms - 200
+2025-12-10 16:22:18.414 -04:00 [INF] ✅ API: 200 registros extraídos en 355ms
+2025-12-10 16:22:18.426 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_162218.json
+2025-12-10 16:22:18.427 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Invalid object name 'Reviews'.
+2025-12-10 16:22:18.444 -04:00 [INF] ✅ Guardados 200 comentarios en staging: ../../../staging\staging_20251210_162218.json
+2025-12-10 16:22:18.453 -04:00 [INF] ✅ Extracción completada: 2/3 fuentes, 220 registros, 825ms
+2025-12-10 16:22:18.460 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 2/3, Registros: 220, Tiempo: "00:00:00.8259709"
+2025-12-10 16:22:18.470 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 16:34:14.058 -04:00 [INF] 🚀 Iniciando aplicación Worker ETL
+2025-12-10 16:34:14.199 -04:00 [INF] ✅ Aplicación configurada correctamente
+2025-12-10 16:34:14.218 -04:00 [INF] ▶️  Iniciando Worker Service ETL...
+2025-12-10 16:34:14.228 -04:00 [INF] 🚀 Worker Service ETL iniciado en: "2025-12-10T16:34:14.2231996-04:00"
+2025-12-10 16:34:14.237 -04:00 [INF] 📊 Configuración: Directorio staging = ../../../staging
+2025-12-10 16:34:14.244 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-10 16:34:14.246 -04:00 [INF] Hosting environment: Development
+2025-12-10 16:34:14.252 -04:00 [INF] Content root path: C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Presentation
+2025-12-10 16:34:19.265 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 16:34:19
+2025-12-10 16:34:19.618 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 16:34:19.623 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 16:34:20.017 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 16:34:20.028 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 16:34:20.036 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 16:34:20.045 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 16:34:20.050 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 427ms
+2025-12-10 16:34:20.285 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 16:34:20.453 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/Comentarios/redes-sociales
+2025-12-10 16:34:20.524 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/Comentarios/redes-sociales
+2025-12-10 16:34:20.528 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/Comentarios/redes-sociales
+2025-12-10 16:34:20.654 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Reviews'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 72
+ClientConnectionId:69e49480-5de2-4a50-b108-88b72cbb597a
+Error Number:208,State:1,Class:16
+2025-12-10 16:34:24.651 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:5144)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 67
+2025-12-10 16:34:24.739 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_163424.json
+2025-12-10 16:34:24.758 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Invalid object name 'Reviews'.
+2025-12-10 16:34:24.766 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: No connection could be made because the target machine actively refused it. (localhost:5144)
+2025-12-10 16:34:24.774 -04:00 [INF] ✅ Extracción completada: 1/3 fuentes, 20 registros, 5155ms
+2025-12-10 16:34:24.781 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 1/3, Registros: 20, Tiempo: "00:00:05.1553266"
+2025-12-10 16:34:24.791 -04:00 [INF] ⏳ Próxima ejecución en 00:04:54
+2025-12-10 16:37:33.088 -04:00 [INF] 🚀 Iniciando aplicación Worker ETL
+2025-12-10 16:37:33.237 -04:00 [INF] ✅ Aplicación configurada correctamente
+2025-12-10 16:37:33.250 -04:00 [INF] ▶️  Iniciando Worker Service ETL...
+2025-12-10 16:37:33.262 -04:00 [INF] 🚀 Worker Service ETL iniciado en: "2025-12-10T16:37:33.2585320-04:00"
+2025-12-10 16:37:33.280 -04:00 [INF] 📊 Configuración: Directorio staging = ../../../staging
+2025-12-10 16:37:33.341 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-10 16:37:33.343 -04:00 [INF] Hosting environment: Development
+2025-12-10 16:37:33.345 -04:00 [INF] Content root path: C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Presentation
+2025-12-10 16:37:38.351 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 16:37:38
+2025-12-10 16:37:38.370 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-10 16:37:38.374 -04:00 [INF] Iniciando extracción desde múltiples archivos CSV
+2025-12-10 16:37:38.455 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-10 16:37:38.464 -04:00 [INF] ✅ Archivo surveys_part1.csv: 5 registros extraídos
+2025-12-10 16:37:38.476 -04:00 [INF] ✅ Archivo clients.csv: 5 registros extraídos
+2025-12-10 16:37:38.483 -04:00 [INF] ✅ Archivo products.csv: 5 registros extraídos
+2025-12-10 16:37:38.488 -04:00 [INF] ✅ Archivo fuente_datos.csv: 5 registros extraídos
+2025-12-10 16:37:38.491 -04:00 [INF] ✅ Multi CSV: 4 archivos, 20 registros extraídos en 116ms
+2025-12-10 16:37:38.559 -04:00 [INF] Iniciando extracción desde API: http://localhost:5144/api/Comentarios/redes-sociales
+2025-12-10 16:37:38.569 -04:00 [INF] Start processing HTTP request GET http://localhost:5144/api/Comentarios/redes-sociales
+2025-12-10 16:37:38.573 -04:00 [INF] Sending HTTP request GET http://localhost:5144/api/Comentarios/redes-sociales
+2025-12-10 16:37:38.734 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Reviews'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 72
+ClientConnectionId:305877cd-bb89-464f-8ed6-96a2fb94f6b2
+Error Number:208,State:1,Class:16
+2025-12-10 16:37:38.826 -04:00 [INF] Received HTTP response headers after 247.8823ms - 200
+2025-12-10 16:37:38.832 -04:00 [INF] End processing HTTP request after 268.319ms - 200
+2025-12-10 16:37:38.874 -04:00 [INF] ✅ API: 200 registros extraídos en 315ms
+2025-12-10 16:37:38.885 -04:00 [INF] ✅ Guardados 20 comentarios en staging: ../../../staging\staging_20251210_163738.json
+2025-12-10 16:37:38.888 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Invalid object name 'Reviews'.
+2025-12-10 16:37:38.904 -04:00 [INF] ✅ Guardados 200 comentarios en staging: ../../../staging\staging_20251210_163738.json
+2025-12-10 16:37:38.910 -04:00 [INF] ✅ Extracción completada: 2/3 fuentes, 220 registros, 539ms
+2025-12-10 16:37:38.916 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 2/3, Registros: 220, Tiempo: "00:00:00.5393679"
+2025-12-10 16:37:38.922 -04:00 [INF] ⏳ Próxima ejecución en 00:04:59
+2025-12-10 16:39:57.303 -04:00 [INF] Application is shutting down...
+2025-12-10 16:39:57.313 -04:00 [INF] ⏹️  Deteniendo Worker Service ETL...

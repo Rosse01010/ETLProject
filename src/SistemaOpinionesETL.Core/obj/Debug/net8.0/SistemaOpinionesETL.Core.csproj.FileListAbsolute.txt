@@ -1,0 +1,11 @@
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Core\bin\Debug\net8.0\SistemaOpinionesETL.Core.deps.json
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Core\bin\Debug\net8.0\SistemaOpinionesETL.Core.dll
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Core\bin\Debug\net8.0\SistemaOpinionesETL.Core.pdb
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Core\obj\Debug\net8.0\SistemaOpinionesETL.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Core\obj\Debug\net8.0\SistemaOpinionesETL.Core.AssemblyInfoInputs.cache
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Core\obj\Debug\net8.0\SistemaOpinionesETL.Core.AssemblyInfo.cs
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Core\obj\Debug\net8.0\SistemaOpinionesETL.Core.csproj.CoreCompileInputs.cache
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Core\obj\Debug\net8.0\SistemaOpinionesETL.Core.dll
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Core\obj\Debug\net8.0\refint\SistemaOpinionesETL.Core.dll
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Core\obj\Debug\net8.0\SistemaOpinionesETL.Core.pdb
+C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Core\obj\Debug\net8.0\ref\SistemaOpinionesETL.Core.dll

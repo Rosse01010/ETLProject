@@ -1,0 +1,6 @@
+﻿IdOpinion,IdCliente,IdProducto,Fecha,Comentario,Clasificación,PuntajeSatisfacción,Fuente
+1,C001,P001,2023-12-01,"Excelente producto, muy recomendable",Positivo,5,Encuesta
+2,C002,P002,2023-12-02,"Buen producto, podría mejorar el empaque",Positivo,4,Encuesta
+3,C003,P001,2023-12-03,"No funcionó como esperaba",Negativo,2,Encuesta
+4,C004,P003,2023-12-04,"La entrega fue rápida y el producto de calidad",Positivo,5,Encuesta
+5,C005,P002,2023-12-05,"Regular, esperaba más características",Neutral,3,Encuesta

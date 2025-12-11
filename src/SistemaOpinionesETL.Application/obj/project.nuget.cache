@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZIzymxbTBlE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\r89ed\\SistemaOpinionesETL\\src\\SistemaOpinionesETL.Application\\SistemaOpinionesETL.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\r89ed\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\r89ed\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

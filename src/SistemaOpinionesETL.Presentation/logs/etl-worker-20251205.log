@@ -1,0 +1,182 @@
+2025-12-05 21:58:32.001 -04:00 [INF] 🚀 Iniciando aplicación Worker ETL
+2025-12-05 21:58:32.190 -04:00 [FTL] ❌ Error fatal en la aplicación
+System.IO.InvalidDataException: Failed to load configuration from file 'C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Presentation\appsettings.json'.
+ ---> System.FormatException: Could not parse the JSON file.
+ ---> System.Text.Json.JsonReaderException: ',' is invalid after a single JSON value. Expected end of data. LineNumber: 23 | BytePositionInLine: 3.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenUntilAfterAllCommentsAreSkipped(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextToken(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenOrRollback(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationFileParser.ParseStream(Stream input)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.AddSource(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.ConfigurationSources.Add(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.Microsoft.Extensions.Configuration.IConfigurationBuilder.Add(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationExtensions.Add[TSource](IConfigurationBuilder builder, Action`1 configureSource)
+   at Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(IConfigurationBuilder builder, String path, Boolean optional, Boolean reloadOnChange)
+   at Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ApplyDefaultAppConfiguration(HostBuilderContext hostingContext, IConfigurationBuilder appConfigBuilder, String[] args)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder..ctor(HostApplicationBuilderSettings settings)
+   at Microsoft.Extensions.Hosting.Host.CreateApplicationBuilder(String[] args)
+   at Program.<Main>$(String[] args) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Presentation\Program.cs:line 28
+2025-12-05 22:16:15.726 -04:00 [INF] 🚀 Iniciando aplicación Worker ETL
+2025-12-05 22:16:15.884 -04:00 [FTL] ❌ Error fatal en la aplicación
+System.IO.InvalidDataException: Failed to load configuration from file 'C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Presentation\appsettings.json'.
+ ---> System.FormatException: Could not parse the JSON file.
+ ---> System.Text.Json.JsonReaderException: ',' is invalid after a single JSON value. Expected end of data. LineNumber: 23 | BytePositionInLine: 3.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenUntilAfterAllCommentsAreSkipped(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextToken(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenOrRollback(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationFileParser.ParseStream(Stream input)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.AddSource(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.ConfigurationSources.Add(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.Microsoft.Extensions.Configuration.IConfigurationBuilder.Add(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationExtensions.Add[TSource](IConfigurationBuilder builder, Action`1 configureSource)
+   at Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(IConfigurationBuilder builder, String path, Boolean optional, Boolean reloadOnChange)
+   at Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ApplyDefaultAppConfiguration(HostBuilderContext hostingContext, IConfigurationBuilder appConfigBuilder, String[] args)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder..ctor(HostApplicationBuilderSettings settings)
+   at Microsoft.Extensions.Hosting.Host.CreateApplicationBuilder(String[] args)
+   at Program.<Main>$(String[] args) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Presentation\Program.cs:line 28
+2025-12-05 22:19:39.373 -04:00 [INF] 🚀 Iniciando aplicación Worker ETL
+2025-12-05 22:19:39.650 -04:00 [INF] ✅ Aplicación configurada correctamente
+2025-12-05 22:19:39.669 -04:00 [INF] ▶️  Iniciando Worker Service ETL...
+2025-12-05 22:19:39.683 -04:00 [INF] 🚀 Worker Service ETL iniciado en: "2025-12-05T22:19:39.6723735-04:00"
+2025-12-05 22:19:39.690 -04:00 [INF] 📊 Configuración: Directorio staging = staging
+2025-12-05 22:19:39.697 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-05 22:19:39.699 -04:00 [INF] Hosting environment: Development
+2025-12-05 22:19:39.700 -04:00 [INF] Content root path: C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Presentation
+2025-12-05 22:19:44.705 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 22:19:44
+2025-12-05 22:19:44.886 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-05 22:19:45.046 -04:00 [INF] Iniciando extracción desde CSV: Data/encuestas.csv
+2025-12-05 22:19:45.049 -04:00 [WRN] Archivo CSV no encontrado: Data/encuestas.csv
+2025-12-05 22:19:45.265 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-05 22:19:45.462 -04:00 [INF] Iniciando extracción desde API: https://localhost:7001/api/comentarios/redes-sociales
+2025-12-05 22:19:45.474 -04:00 [INF] Start processing HTTP request GET https://localhost:7001/api/comentarios/redes-sociales
+2025-12-05 22:19:45.480 -04:00 [INF] Sending HTTP request GET https://localhost:7001/api/comentarios/redes-sociales
+2025-12-05 22:19:49.605 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:7001)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 67
+2025-12-05 22:19:55.658 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "FuenteOpiniones" requested by the login. The login failed.
+Login failed for user 'R89education\r89ed'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:822aed7c-04e7-4b2f-8ccc-a05ce7164fc1
+Error Number:4060,State:1,Class:11
+2025-12-05 22:19:55.672 -04:00 [WRN] ⚠️ Extracción fallida: CSV Extractor - Configuración inválida o archivo no encontrado
+2025-12-05 22:19:55.675 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Cannot open database "FuenteOpiniones" requested by the login. The login failed.
+Login failed for user 'R89education\r89ed'.
+2025-12-05 22:19:55.678 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: No connection could be made because the target machine actively refused it. (localhost:7001)
+2025-12-05 22:19:55.680 -04:00 [INF] ✅ Extracción completada: 0/3 fuentes, 0 registros, 10794ms
+2025-12-05 22:19:55.684 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 0/3, Registros: 0, Tiempo: "00:00:10.7940279"
+2025-12-05 22:19:55.689 -04:00 [INF] ⏳ Próxima ejecución en 00:04:49
+2025-12-05 22:24:44.716 -04:00 [INF] 🔄 Iniciando ciclo de extracción ETL - 22:24:44
+2025-12-05 22:24:44.727 -04:00 [INF] 🚀 Iniciando proceso de extracción ETL
+2025-12-05 22:24:44.729 -04:00 [INF] Iniciando extracción desde CSV: Data/encuestas.csv
+2025-12-05 22:24:44.730 -04:00 [WRN] Archivo CSV no encontrado: Data/encuestas.csv
+2025-12-05 22:24:44.731 -04:00 [INF] Iniciando extracción desde base de datos
+2025-12-05 22:24:44.736 -04:00 [INF] Iniciando extracción desde API: https://localhost:7001/api/comentarios/redes-sociales
+2025-12-05 22:24:44.739 -04:00 [INF] Start processing HTTP request GET https://localhost:7001/api/comentarios/redes-sociales
+2025-12-05 22:24:44.740 -04:00 [INF] Sending HTTP request GET https://localhost:7001/api/comentarios/redes-sociales
+2025-12-05 22:24:48.815 -04:00 [ERR] ❌ Error HTTP en extracción de API
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:7001)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at SistemaOpinionesETL.Infrastructure.Extractors.ApiExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\ApiExtractor.cs:line 67
+2025-12-05 22:24:54.779 -04:00 [ERR] ❌ Error SQL en extracción de BD
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "FuenteOpiniones" requested by the login. The login failed.
+Login failed for user 'R89education\r89ed'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at SistemaOpinionesETL.Infrastructure.Extractors.DatabaseExtractor.ExtraerAsync(CancellationToken cancellationToken) in C:\Users\r89ed\SistemaOpinionesETL\src\SistemaOpinionesETL.Infrastructure\Extractors\DatabaseExtractor.cs:line 59
+ClientConnectionId:08707373-cad5-4939-87b3-6c5212cdac9a
+Error Number:4060,State:1,Class:11
+2025-12-05 22:24:54.795 -04:00 [WRN] ⚠️ Extracción fallida: CSV Extractor - Configuración inválida o archivo no encontrado
+2025-12-05 22:24:54.797 -04:00 [WRN] ⚠️ Extracción fallida: Database Extractor - Error de base de datos: Cannot open database "FuenteOpiniones" requested by the login. The login failed.
+Login failed for user 'R89education\r89ed'.
+2025-12-05 22:24:54.800 -04:00 [WRN] ⚠️ Extracción fallida: API Extractor - Error HTTP: No connection could be made because the target machine actively refused it. (localhost:7001)
+2025-12-05 22:24:54.802 -04:00 [INF] ✅ Extracción completada: 0/3 fuentes, 0 registros, 10074ms
+2025-12-05 22:24:54.807 -04:00 [INF] ✅ ETL completado. Fuentes exitosas: 0/3, Registros: 0, Tiempo: "00:00:10.0747779"
+2025-12-05 22:24:54.810 -04:00 [INF] ⏳ Próxima ejecución en 00:04:49
